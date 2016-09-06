@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+:root {
+	font-size: 16px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+@media only screen and (min-width: 1280px) {
+	:root {
+		font-size: 17px;
+	}
+}
+
+@media only screen and (min-width: 1680px) {
+	:root {
+		font-size: 18px;
+	}
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+html {
+	font-size: 100%;
+	color: #ddd;
+	background-color: #222;
+	overflow-y: scroll;
+	height: 100%;
+}
+
+body {
+	font-family: 'Segoe UI','Helvetica Neue','Lucida Sans Unicode',Helvetica,Arial,sans-serif;
+	line-height: 1.6;
+	min-height: 100%;
+}
+
+pre, code, kbd, samp, var, abbr, acronym {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre, code, kbd, samp, var {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+pre code, kbd, samp, var {
+	display: inline-block;
+	font: .8125em/1.6 Monaco,Menlo,'Lucida Console',Consolas,'Courier New',monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	text-shadow: rgba(0,0,0,.75) 1px 1px 0;
+	text-rendering: optimizeLegibility;
+	line-height: 1.333;
+	margin: 0 0 0.33em 0;
+}
+
+h1 {
+	display: inline-block;
+	width: 14.78125rem;
+	height: 3.28125rem;
+	text-indent: 99em;
+	overflow: hidden;
+	background-image: url(/macalha.svg);
+}
+ 
+h2 {
+	font-size: 1.75em;
+}
+ 
+h3 {
+	font-size: 1.5em;
+}
+ 
+h4 {
+	font-size: 1.25em;
+}
+ 
+h5 {
+	font-size: 1.125em;
+}
+ 
+h6 {
+	font-size: 1em;
+}
+
+code {
+	color: #999;
+}
+
+pre code {
+	color: #ccc;
+	background-color: rgba(0,0,0,.45);
+	width: 100%;
+	padding: 0 .9em .9em;
+	border: solid 1px #000;
+}
+
+a {
+	color: #999;
+}
+
+a[rel=noopener] {
+	target-new: tab !important
+}
