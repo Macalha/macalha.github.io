@@ -34,8 +34,9 @@
 
 html {
 	font-size: 100%;
-	color: #ddd;
+	color: #bbb;
 	background-color: #222;
+	background-image: linear-gradient(rgba(0,0,0,.5),rgba(34,34,34,0) 2.6rem);
 	overflow-y: scroll;
 	height: 100%;
 }
@@ -64,16 +65,24 @@ pre code, kbd, samp, var {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #fff;
-	text-shadow: rgba(0,0,0,.75) 1px 1px 0;
+	color: #eee;
+	text-shadow: #000 1px 1px 0;
 	text-rendering: optimizeLegibility;
 	line-height: 1.333;
 	margin: 0 0 0.33em 0;
 }
 
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+	margin-top: 0.66em;
+}
+
 h1 {
+/*
 	width: 14.78125rem;
 	height: 3.28125rem;
+*/
+	width: calc(29.5625rem * .7);
+	height: calc(6.5625rem * .7);
 	display: inline-block;
 	text-indent: 99em;
 	overflow: hidden;
@@ -118,4 +127,27 @@ a {
 
 a[rel=noopener] {
 	target-new: tab !important
+}
+
+
+
+.full-width {
+	width: 100%;
+	margin: 0;
+	padding: 0 10%;
+}
+
+
+@media only screen and (max-width: 640px) {
+	:root {
+		font-size: 13px;
+	}
+
+	.full-width {
+		padding: 0 1%;
+	}
+
+	h1 {
+		text-align: center;
+	}
 }
