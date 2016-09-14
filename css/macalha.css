@@ -11,6 +11,12 @@
 	text-size-adjust: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+	:root {
+		font-size: 13px;
+	}
+}
+
 @media only screen and (min-width: 1280px) {
 	:root {
 		font-size: 17px;
@@ -36,13 +42,17 @@ html {
 	font-size: 100%;
 	color: #bbb;
 	background-color: #222;
-	background-image: linear-gradient(rgba(0,0,0,.5),rgba(34,34,34,0) 2.6rem);
+	background-image: url(/img/bg.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
 	overflow-y: scroll;
 	height: 100%;
 }
 
 body {
 	font-family: 'Segoe UI','Helvetica Neue','Lucida Sans Unicode',Helvetica,Arial,sans-serif;
+	background-image: linear-gradient(rgba(0,0,0,.5),rgba(34,34,34,0) 6rem);
 	line-height: 1.6;
 	min-height: 100%;
 }
@@ -131,23 +141,66 @@ a[rel=noopener] {
 
 
 
+
+
+
+
 .full-width {
 	width: 100%;
-	margin: 0;
-	padding: 0 10%;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+@media only screen and (min-width: 800px) {
+	.full-width {
+		padding-left: calc(50% - 385px);
+		padding-right: calc(50% - 385px);
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.full-width {
+		padding-left: calc(50% - 500px);
+		padding-right: calc(50% - 500px);
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.full-width {
+		padding-left: calc(50% - 600px);
+		padding-right: calc(50% - 600px);
+	}
+}
+
+@media only screen and (min-width: 1680px) {
+	.full-width {
+		padding-left: calc(50% - 700px);
+		padding-right: calc(50% - 700px);
+	}
 }
 
 
-@media only screen and (max-width: 640px) {
-	:root {
-		font-size: 13px;
-	}
 
-	.full-width {
-		padding: 0 1%;
-	}
 
-	h1 {
-		text-align: center;
-	}
+
+header, header p {
+	text-align: center;
+}
+
+header p {
+	font-weight:400;
+	margin-top: -16px;
+	margin-top: -1rem;
+}
+
+header p span {
+	position: relative;
+	top: .15em;
+	color: #666;
+	font-size: 1.4em;
+}
+
+main {
+	padding-top: 32px;
+	padding-top: 2rem;
 }
