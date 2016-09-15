@@ -74,8 +74,11 @@ pre code, kbd, samp, var {
 	font: .8125em/1.6 Monaco,Menlo,'Lucida Console',Consolas,'Courier New',monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, b, strong {
 	color: #eee;
+}
+
+h1, h2, h3, h4, h5, h6 {
 	text-shadow: #000 1px 1px 0;
 	text-rendering: optimizeLegibility;
 	line-height: 1.333;
@@ -87,26 +90,30 @@ p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
 }
 
 h1 {
-/*
-	width: 14.78125rem;
-	height: 3.28125rem;
-*/
-	width: calc(29.5625rem * .7);
-	height: calc(6.5625rem * .7);
 	display: inline-block;
+	width: 20.69375rem;
+	height: 4.59375rem;
+	margin-bottom: .2em;
 	text-indent: 99em;
 	overflow: hidden;
-	background-image: url(/img/macalha.svg)
+	background-image: url(/img/macalha.svg);
 }
- 
+
+.no-svg h1 {
+	width: 331px;
+	height: 73px;
+	background-image: url(/img/macalha.png);
+	background-size: 331px 73px;
+}
+
 h2 {
 	font-size: 1.75em;
 }
- 
+
 h3 {
 	font-size: 1.5em;
 }
- 
+
 h4 {
 	font-size: 1.25em;
 }
@@ -133,6 +140,11 @@ pre code {
 
 a {
 	color: #999;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 a[rel=noopener] {
@@ -203,4 +215,31 @@ header p span {
 main {
 	padding-top: 32px;
 	padding-top: 2rem;
+}
+
+
+
+
+.fa:before {
+	color: #fff;
+	padding-right: .5em;
+}
+
+.at {
+	font-size: 0;
+}
+
+.at:before {
+	font-size: 16px;
+	font-size: 1rem;
+	content: '\0040';
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	padding-left: 0;
+	margin-left: 2.14285714em
 }
