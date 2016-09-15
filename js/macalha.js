@@ -1,8 +1,26 @@
-!function(win,doc,html){
-// JavaScript
+!function(win,doc,nav,html){
+// JavaScript active ?
 	html.className = html.className.replace(/\bno-js\b/,'js');
 
-// Fonts
+// Old IE ?
+/*@cc_on
+	if(!doc.documentMode) doc.documentMode = parseFloat(nav.userAgent.match(/MSIE ([0-9]+(\.[0-9]+)?)/)[1]);
+	html.className += ' oldIE';
+	if(doc.documentMode < 9) html.className += ' lte-ie8';
+	if(doc.documentMode < 8) html.className += ' lte-ie7';
+	if(doc.documentMode < 7) html.className += ' lte-ie6';
+@*/
+
+// Has SVG support ?
+	if(!document.implementation || !document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) setTimeout(function(){
+		var img = new Image(1,1);
+		img.onerror = function () {
+			html.className += ' no-svg';
+		};
+		img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==';
+	},0);
+
+// Fonts are loaded ?
 	+function(){
 		var fn = function(){
 			html.className += ' font-loaded';
@@ -17,4 +35,4 @@
 		}
 	}();
 
-}(window,document,document.documentElement || document.getElementsByTagName('html')[0]);
+}(window,document,navigator,document.documentElement);
