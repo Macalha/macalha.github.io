@@ -1,15 +1,26 @@
 @charset "utf-8";
 
-.lte-ie7 {
-	display: inline;
-}
-
 .lte-ie8 h1 {
 	background-image: none;
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/macalha.png",sizingMethod="scale");
+	-ms-filter: 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/macalha.png",sizingMethod="scale")';
 }
 
-.lte-ie7 .at {
+.lte-ie7 #at {
 	font-size: 16px;
 	color: #888;
+}
+
+.data-icon {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-size: inherit;
+}
+
+.data-icon-left {
+	padding-right: .5em;
+}
+
+.data-icon-right {
+	padding-left: .5em;
 }
