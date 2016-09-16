@@ -212,6 +212,21 @@ header p span {
 	font-size: 1.4em;
 }
 
+
+
+#crlf {
+	visibility: hidden;
+	display: inline-block;
+	width: 0;
+}
+
+#crlf:after {
+	display: inline !important;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	content: '\000a';
+}
+
 main {
 	padding-top: 32px;
 	padding-top: 2rem;
