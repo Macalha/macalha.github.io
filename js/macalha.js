@@ -4,14 +4,20 @@
 
 // Old IE ?
 /*@cc_on
-	if(!doc.documentMode) doc.documentMode = parseFloat(nav.userAgent.match(/MSIE ([0-9]+(\.[0-9]+)?)/)[1]);
 	html.className += ' oldIE';
+	if(!doc.documentMode) doc.documentMode = parseFloat(nav.userAgent.match(/MSIE ([0-9]+(\.[0-9]+)?)/)[1]);
 	if(doc.documentMode < 9) html.className += ' lte-ie8';
-	if(doc.documentMode < 8) html.className += ' lte-ie7';
+	if(doc.documentMode < 8) {
+		html.className += ' lte-ie7';
+		win.attachEvent('onload',function(){
+			doc.getElementById('crlf-bar').innerHTML = '/ ';
+			doc.getElementById('at').innerHTML = '@';
+		})
+	}
 	if(doc.documentMode < 7) html.className += ' lte-ie6';
 @*/
 
-// Has SVG support ?
+// Supports SVG ?
 	if(!document.implementation || !document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) setTimeout(function(){
 		var img = new Image(1,1);
 		img.onerror = function () {
