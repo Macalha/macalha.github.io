@@ -42,3 +42,13 @@
 	}();
 
 }(window,document,navigator,document.documentElement);
+
+window.onload = function(){
+	var email = document.getElementById('at').parentNode.innerHTML.replace(/<span.*\/span>/,'@');
+	var endereco1 = document.getElementById('at').parentNode.parentNode;
+	var c = document.getElementById('at').parentNode.cloneNode(true); 
+	var a = document.createElement('a');
+	a.appendChild(c);
+	a.href = 'mailto:' + email;
+	endereco1.replaceChild(a,document.getElementById('at').parentNode); 
+}
