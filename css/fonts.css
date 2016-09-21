@@ -34,9 +34,18 @@
 	font-size: inherit;
 	text-rendering: auto;
 	text-shadow: #000 1px 1px 0;
-	color: #fff;
+	color: #ddd;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+	[data-icon]:before, [data-icon]:after {
+		background: linear-gradient(#fff 35%,#607080);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-shadow: none !important;
+	}
 }
 
 [data-icon]:before,[data-icon][data-icon-pos=before]:before {

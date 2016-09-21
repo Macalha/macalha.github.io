@@ -34,7 +34,7 @@
 
 html {
 	font-size: 100%;
-	color: #bbb;
+	color: #bdbdbd;
 	background-color: #222;
 	background-image: url(/img/bg.jpg);
 	background-attachment: fixed;
@@ -137,12 +137,14 @@ pre code {
 }
 
 a {
-	color: #999;
+	color: #536dfe;
 	text-decoration: none;
 }
 
 a:hover {
+	color: #607d8b;
 	text-decoration: underline;
+	text-decoration-color: #536dfe;
 }
 
 a[rel=noopener] {
@@ -247,10 +249,29 @@ li {
 	margin-left: 2.14285714em
 }
 
-[data-icon]:before {
+
+
+
+
+
+[data-icon]:before, [data-icon]:after {
 	font-size: 1.15em !important;
 }
 
 [data-icon] {
 	font-size: 1em !important;
+}
+
+
+
+
+
+
+
+
+
+.teste {
+	color: #757575;
+	color: #cfd8dc;
+	color: #455a64;
 }
