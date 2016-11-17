@@ -104,6 +104,12 @@ h1 {
 	background-size: 331px 73px;
 }
 
+h1 a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
 h2 {
 	font-size: 1.75em;
 }
@@ -137,14 +143,13 @@ pre code {
 }
 
 a {
-	color: #536dfe;
+	color: #94aeff;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #607d8b;
 	text-decoration: underline;
-	text-decoration-color: #536dfe;
+	text-decoration-color: #233dce;
 }
 
 a[rel=noopener] {
@@ -229,6 +234,9 @@ main {
 	padding-top: 2rem;
 }
 
+main p {
+	text-indent: 2.14285714em;
+}
 
 #at {
 	font-size: 0;
@@ -248,21 +256,6 @@ li {
 	padding-left: 0;
 	margin-left: 2.14285714em
 }
-
-
-
-
-
-
-[data-icon]:before, [data-icon]:after {
-	font-size: 1.15em !important;
-}
-
-[data-icon] {
-	font-size: 1em !important;
-}
-
-
 
 
 
