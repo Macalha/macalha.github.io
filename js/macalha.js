@@ -43,6 +43,8 @@
 
 }(window,document,navigator,document.documentElement);
 
+alert(navigator.connection.downlink);
+
 window.onload = function(){
 	var email = document.getElementById('at').parentNode.innerHTML.replace(/<span.*\/span>/,'@');
 	var endereco1 = document.getElementById('at').parentNode.parentNode;
